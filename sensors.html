@@ -1,0 +1,42 @@
+<html>
+
+    <head>
+        <script type="text/javascript">
+
+/*
+function show() {
+    var url = new URL(window.location.href);
+    var c = '.' + url.searchParams.get("show");
+    for (let el of document.querySelectorAll(c)) el.style.display = 'table-row';
+}
+*/
+
+//var url = "https://www.example.com/?test=1&PIN=123456ABCDEF";
+    var url = new URL(window.location.href);
+// or window.location.href for current url
+var temp = /temp=([^&]+)/.exec(url)[1];
+// Value is in [1] ('384' in our case)
+//var result = captured ? captured : 'myDefaultValue';
+
+var humidity = /humidity=([^&]+)/.exec(url)[1];
+
+var ambientnoise = /ambientnoise=([^&]+)/.exec(url)[1];
+
+document.getElementById("test-humidity").innerHTML = humidity;
+document.getElementById("test-temp").innerHTML = temp;
+document.getElementById("test-ambientnoise").innerHTML = ambientnoise;
+
+</script>
+
+
+<body>
+	<div id="test-humidity"></div> 
+	<div id="test-temp"></div> 
+	<div id="test-ambientnoise"></div> 
+	
+	
+</body>
+
+
+
+</html>
