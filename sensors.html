@@ -1,39 +1,44 @@
 <html>
 
     <head>
-        <script type="text/javascript">
+        <script>
+   function myFunction() {
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
 
-/*
-function show() {
-    var url = new URL(window.location.href);
-    var c = '.' + url.searchParams.get("show");
-    for (let el of document.querySelectorAll(c)) el.style.display = 'table-row';
-}
-*/
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
 
-//var url = "https://www.example.com/?test=1&PIN=123456ABCDEF";
-    var url = new URL(window.location.href);
-// or window.location.href for current url
-var temp = /temp=([^&]+)/.exec(url)[1];
-// Value is in [1] ('384' in our case)
-//var result = captured ? captured : 'myDefaultValue';
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
 
-var humidity = /humidity=([^&]+)/.exec(url)[1];
-
-var ambientnoise = /ambientnoise=([^&]+)/.exec(url)[1];
+var humidity = getUrlParameter('humidity');
+var temp = getUrlParameter('temp');
+var ambientnoise = getUrlParameter('ambientnoise');
 
 document.getElementById("test-humidity").innerHTML = humidity;
 document.getElementById("test-temp").innerHTML = temp;
 document.getElementById("test-ambientnoise").innerHTML = ambientnoise;
-
+}
 </script>
+</head>
 
 
-<body>
-	<div id="test-humidity"></div> 
-	<div id="test-temp"></div> 
-	<div id="test-ambientnoise"></div> 
-	
+<body onload="myFunction()">
+
+
+<h1> Temperature : <span id="test-temp"></span> �C</H1>
+<h1> Humidit� : <span id="test-humidity"></span> %</H1>
+<h1> Bruit Ambiant : <span id="test-ambientnoise"></span> dBA</H1>
+
+
 	
 </body>
 
