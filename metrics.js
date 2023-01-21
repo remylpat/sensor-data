@@ -1,17 +1,27 @@
 import xapi from 'xapi';
 
+//init config
+xapi.Config.HttpClient.AllowHTTP.set('True');
+xapi.Config.HttpClient.AllowInsecureHTTPS.set('True');
+xapi.Config.HttpClient.Mode.set('On');
+xapi.Config.RoomAnalytics.AmbientNoiseEstimation.Mode.set('On');
 
-const baseUrl = 'github.com/sensor-data';
-const updateSec = 10;
+
+
+const baseUrl = 'https://remylpat.github.io/sensor-data/sensors.html';
+
+//Update frequency
+const updateSec = 300;
+
 
 async function updateUrl() {
   const temp = await xapi.Status.RoomAnalytics.AmbientTemperature.get();
   const hum = await xapi.Status.RoomAnalytics.RelativeHumidity.get();
   const anoise = await xapi.Status.RoomAnalytics.AmbientNoise.Level.A.get();
 // AIR QUALITY 
-//only avialable if RoomNavigator available
+//only avialable if RoomNavigator
 //  const airquality = await xapi.Status.RoomAnalytics.airquality.get();
-  const url = baseUrl + '?temp=' + temp + '&humidity=' + hum + '&ambiantNoise=' +anoise; // + '&airquality' + airquality;
+  const url = baseUrl + '?temp=' + temp + '&humidity=' + hum + '&ambientnoise=' +anoise; // + '&airquality' + airquality;
   xapi.Config.Standby.Signage.Url.set(url);
   console.log('signage url updated:', url);
 }
