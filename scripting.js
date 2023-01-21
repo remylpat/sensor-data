@@ -18,8 +18,10 @@ function myFunction() {
     var humidity = getUrlParameter('humidity');
     var temp = getUrlParameter('temp');
     var ambientnoise = getUrlParameter('ambientnoise');
+    var name = getUrlParameter('name');
     
     document.getElementById("test-humidity").innerHTML = humidity;
     document.getElementById("test-temp").innerHTML = temp;
     document.getElementById("test-ambientnoise").innerHTML = ambientnoise;
+    document.getElementById("test-name").innerHTML = name;
     }
