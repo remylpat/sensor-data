@@ -1,0 +1,34 @@
+.sensorbox{
+    border:1px solid white;
+    border-radius: 40px;
+  background:black;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+.sensorTitle{
+    text-align: center;
+    font-size:30px;
+    color:#4599cf;
+}
+.sensorValue{
+    text-align:center;
+    margin-top:25px;
+    font-size:40px;
+}
+.sensorBoxesRow{
+    
+}
+body {
+font-family: 'Karla';
+color:white;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+    background-image: url('./webex_bg.jpg');
+    
+    background-size: 100%;
+  }
