@@ -1,6 +1,4 @@
-# sensor-data
-test sensor data from codec
-
+Display Sensors from codecs on a Digital Signage Page
 
 Access sensors from Cisco Codecs locally and display them on a Digital signage page
 
