@@ -6,7 +6,7 @@ xapi.Config.HttpClient.AllowInsecureHTTPS.set('True');
 xapi.Config.HttpClient.Mode.set('On');
 xapi.Config.RoomAnalytics.AmbientNoiseEstimation.Mode.set('On');
 
-const baseUrl = 'https://fabmarti17.github.io/sensor-data/sensors.html';
+const baseUrl = 'https://fabmarti17.github.io/sensor-data/roomseriesnavigator.html';
 
 //Update frequency
 const updateSec = 300;
