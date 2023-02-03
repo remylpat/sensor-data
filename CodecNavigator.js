@@ -6,13 +6,10 @@ xapi.Config.HttpClient.AllowInsecureHTTPS.set('True');
 xapi.Config.HttpClient.Mode.set('On');
 xapi.Config.RoomAnalytics.AmbientNoiseEstimation.Mode.set('On');
 
-
-
 const baseUrl = 'https://fabmarti17.github.io/sensor-data/sensors.html';
 
 //Update frequency
 const updateSec = 300;
-
 
 async function updateUrl() {
   const temp = await xapi.Status.Peripherals.ConnectedDevice.RoomAnalytics.AmbientTemperature.get();
