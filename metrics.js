@@ -18,7 +18,7 @@ async function updateUrl() {
   const temp = await xapi.Status.RoomAnalytics.AmbientTemperature.get();
   const hum = await xapi.Status.RoomAnalytics.RelativeHumidity.get();
   const anoise = await xapi.Status.RoomAnalytics.AmbientNoise.Level.A.get();
-    const name = await xapi.Status.SystemUnit.BroadcastName.get();
+  const name = await xapi.Status.SystemUnit.BroadcastName.get();
 // AIR QUALITY 
 //only avialable if RoomNavigator
 //  const airquality = await xapi.Status.RoomAnalytics.airquality.get();
