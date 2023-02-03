@@ -35,17 +35,17 @@
     </div>
     <div class="row sensorBoxesRow">
         <div class="sensorbox col-md-3">
-            <h1 class="sensorTitle">🌡️ Température</h1>
+            <h1 class="sensorTitle">🌡️ Temperature</h1>
             <h2 class="sensorValue"><span id="test-temp"></span> °C</h2>
         </div>
         <div class="sensorbox offset-1 col-md-3">
-            <h1 class="sensorTitle">💧 Humidité</h1>
+            <h1 class="sensorTitle">💧 Humidity</h1>
             <h2 class="sensorValue"><span id="test-humidity"></span> %</h2>
         </div>
-        <div class="sensorbox offset-1 col-md-3">
-            <h1 class="sensorTitle">🔊 Bruit ambiant</h1>
-            <h2 class="sensorValue"><span id="test-ambientnoise"></span> DBA</h2>
-        </div> 
+        <div class="sensorbox col-md-3">
+            <h1 class="sensorTitle">💨 Air Quality</h1>
+            <h2 class="sensorValue"><span id="test-airquality"></span> TVOC</h2>
+        </div>
     </div>
         
         <br/>
@@ -55,13 +55,17 @@
     
     <div class="row sensorBoxesRow">
         <div class="sensorbox col-md-3">
-            <h1 class="sensorTitle">💨 Qualité Air</h1>
-            <h2 class="sensorValue"><span id="test-airquality"></span> TVOC</h2>
-        </div>
-        <div class="sensorbox col-md-3">
             <h1 class="sensorTitle">👤 Occupation</h1>
             <h2 class="sensorValue"><span id="test-pccur"></span></h2>
         </div>
+        <div class="sensorbox offset-1 col-md-3">
+            <h1 class="sensorTitle">🔊 Sound Level</h1>
+            <h2 class="sensorValue"><span id="test-sound"></span> DBA</h2>
+        </div> 
+        <div class="sensorbox offset-1 col-md-3">
+            <h1 class="sensorTitle">🔊 Ambiant Noise</h1>
+            <h2 class="sensorValue"><span id="test-ambientnoise"></span> DBA</h2>
+        </div> 
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
