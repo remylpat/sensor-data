@@ -22,6 +22,7 @@ function myFunction() {
     var airquality = getUrlParameter('airquality');
     var pccur = getUrlParameter('pccur');
     var ppcap = getUrlParameter('pccap');
+    var sound = getUrlParameter('sound');
     
     document.getElementById("test-humidity").innerHTML = humidity;
     document.getElementById("test-temp").innerHTML = temp;
@@ -30,4 +31,5 @@ function myFunction() {
     document.getElementById("test-airquality").innerHTML = airquality;
     document.getElementById("test-pccur").innerHTML = pccur;
     document.getElementById("test-pccap").innerHTML = pccap;
+    document.getElementById("test-sound").innerHTML = sound;
     }
