@@ -21,15 +21,13 @@ function myFunction() {
     var name = getUrlParameter('name');
     var airquality = getUrlParameter('airquality');
     var pccur = getUrlParameter('pccur');
-    var ppcap = getUrlParameter('pccap');
-    var sound = getUrlParameter('sound');
+    var peoplecount = getUrlParameter('peoplecount');
     
     document.getElementById("test-humidity").innerHTML = humidity;
     document.getElementById("test-temp").innerHTML = temp;
     document.getElementById("test-ambientnoise").innerHTML = ambientnoise;
     document.getElementById("test-name").innerHTML = name;
     document.getElementById("test-airquality").innerHTML = airquality;
-    document.getElementById("test-pccur").innerHTML = pccur;
-    document.getElementById("test-pccap").innerHTML = pccap;
+    document.getElementById("test-peoplecount").innerHTML = peoplecount;
     document.getElementById("test-sound").innerHTML = sound;
     }
