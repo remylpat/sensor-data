@@ -20,10 +20,14 @@ function myFunction() {
     var ambientnoise = getUrlParameter('ambientnoise');
     var name = getUrlParameter('name');
     var airquality = getUrlParameter('airquality');
+    var pccur = getUrlParameter('pccur');
+    var ppcap = getUrlParameter('pccap');
     
     document.getElementById("test-humidity").innerHTML = humidity;
     document.getElementById("test-temp").innerHTML = temp;
     document.getElementById("test-ambientnoise").innerHTML = ambientnoise;
     document.getElementById("test-name").innerHTML = name;
     document.getElementById("test-airquality").innerHTML = airquality;
+    document.getElementById("test-pccur").innerHTML = pccur;
+    document.getElementById("test-pccap").innerHTML = pccap;
     }
