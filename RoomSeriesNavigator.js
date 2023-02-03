@@ -17,8 +17,10 @@ async function updateUrl() {
   const anoise = await xapi.Status.RoomAnalytics.AmbientNoise.Level.A.get();
   const name = await xapi.Status.SystemUnit.BroadcastName.get();
   const airquality = await xapi.Status.Peripherals.ConnectedDevice.RoomAnalytics.AirQuality.Index.get();
+  const pccur = await xapi.Status.RoomAnalytics.PeopleCount.Current.get()
+  const pccap = await xapi.Status.RoomAnalytics.PeopleCount.Capacity.get()
 
-  const url = baseUrl + '?temp=' + temp + '&humidity=' + hum + '&ambientnoise=' +anoise + '&name=' + name + '&airquality' + airquality ;
+  const url = baseUrl + '?temp=' + temp + '&humidity=' + hum + '&ambientnoise=' +anoise + '&name=' + name + '&airquality' + airquality + '&pccur' + pccur + '&pccap' + pccap;
   xapi.Config.Standby.Signage.Url.set(url);
   console.log('signage url updated:', url);
 }
