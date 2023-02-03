@@ -19,9 +19,11 @@ function myFunction() {
     var temp = getUrlParameter('temp');
     var ambientnoise = getUrlParameter('ambientnoise');
     var name = getUrlParameter('name');
+    var airquality = getUrlParameter('airquality');
     
     document.getElementById("test-humidity").innerHTML = humidity;
     document.getElementById("test-temp").innerHTML = temp;
     document.getElementById("test-ambientnoise").innerHTML = ambientnoise;
     document.getElementById("test-name").innerHTML = name;
+    document.getElementById("test-airquality").innerHTML = airquality;
     }
