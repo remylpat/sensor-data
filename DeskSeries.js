@@ -12,8 +12,8 @@ const baseUrl = 'https://fabmarti17.github.io/sensor-data/deskseries.html';
 const updateSec = 300;
 
 async function updateUrl() {
-  const temp = await xapi.Status.Peripherals.ConnectedDevice.RoomAnalytics.AmbientTemperature.get();
-  const hum = await xapi.Status.Peripherals.ConnectedDevice.RoomAnalytics.RelativeHumidity.get();
+  const temp = await xapi.Status.RoomAnalytics.AmbientTemperature.get();
+  const hum = await xapi.Status.RoomAnalytics.RelativeHumidity.get();
   const anoise = await xapi.Status.RoomAnalytics.AmbientNoise.Level.A.get();
   const name = await xapi.Status.SystemUnit.BroadcastName.get();
   const pccur = await xapi.Status.RoomAnalytics.PeopleCount.Current.get()
