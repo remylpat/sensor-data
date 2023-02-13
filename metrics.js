@@ -5,6 +5,10 @@ xapi.Config.HttpClient.AllowHTTP.set('True');
 xapi.Config.HttpClient.AllowInsecureHTTPS.set('True');
 xapi.Config.HttpClient.Mode.set('On');
 xapi.Config.RoomAnalytics.AmbientNoiseEstimation.Mode.set('On');
+xapi.Config.Standby.Control.set('On');
+xapi.Config.Standby.Signage.Mode.set('On');
+xapi.Config.RoomAnalytics.PeopleCountOutOfCall.set('On');
+xapi.Config.RoomAnalytics.PeoplePresenceDetector.set('On');
 
 
 
