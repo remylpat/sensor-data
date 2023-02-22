@@ -11,3 +11,5 @@ the url of digital signage is a github page where the html page is serve for all
 Step 3 : verify the codec can access the url of the digital signage
 
 Step 4 : Enjoy
+
+![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
